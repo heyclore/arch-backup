@@ -20,6 +20,7 @@ set background=dark
 let g:airline_theme = 'pencil'
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
+let airline#extensions#whitespace#enabled = 0
 colorscheme off
 syntax enable
 "set t_Co=256
