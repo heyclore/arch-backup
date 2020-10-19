@@ -5,6 +5,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mattn/emmet-vim'
 Plugin 'preservim/tagbar'
 Plugin 'Jorengarenar/vim-darkness'
@@ -16,10 +17,10 @@ filetype plugin indent on    " required
 filetype off                 " required
 set nocompatible             " be iMproved, required
 
-let g:airline_theme = 'pencil'
+let g:airline_theme = 'base16_grayscale'
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let airline#extensions#whitespace#enabled = 0
+"let airline#extensions#whitespace#enabled = 0
 colorscheme darkness
 syntax enable
 "set t_Co=256
