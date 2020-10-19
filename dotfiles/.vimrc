@@ -31,7 +31,9 @@ set autochdir
 set path+=**
 set wildmenu
 set showcmd
-"set autoread
+set nobackup
+set nowritebackup
+set noswapfile
 
 autocmd Filetype html,css setlocal ts=2 sw=2 expandtab
 nmap <F8> :TagbarToggle<CR>
