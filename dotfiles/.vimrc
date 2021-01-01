@@ -20,6 +20,7 @@ set nocompatible             " be iMproved, required
 let g:airline_theme = 'base16_grayscale'
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
+let g:netrw_preview = 1
 "let airline#extensions#whitespace#enabled = 0
 colorscheme darkness
 syntax enable
@@ -35,6 +36,11 @@ set showcmd
 set nobackup
 set nowritebackup
 set noswapfile
+set cursorline
+set cursorcolumn
 
-autocmd Filetype html,css setlocal ts=2 sw=2 expandtab
+"autocmd Filetype html,css,javascript,ejs,php setlocal ts=2 sw=2 expandtab
+set ts=2 sw=2 expandtab
 nmap <F8> :TagbarToggle<CR>
+
+nnoremap <C-1> 1gt <CR>
