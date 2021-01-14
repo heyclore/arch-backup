@@ -33,14 +33,38 @@ set autochdir
 set path+=**
 set wildmenu
 set showcmd
+set noshowmode
 set nobackup
 set nowritebackup
 set noswapfile
 set cursorline
 set cursorcolumn
+"set incsearch
 
 "autocmd Filetype html,css,javascript,ejs,php setlocal ts=2 sw=2 expandtab
 set ts=2 sw=2 expandtab
 nmap <F8> :TagbarToggle<CR>
 
 nnoremap <C-1> 1gt <CR>
+
+"##### FUCNTION #####
+function! ConsolePrint()
+
+  exec 'w'
+
+  if &filetype == 'python'
+    exec 'bel term python %'
+  endif
+
+  if &filetype == 'go'
+    exec 'bel term docker run --rm -ti --name jancok -v ' . $PWD . ':/usr/src/app -w /usr/src/app -p 8000:8000 golang:1.15.6-alpine go run %'
+  endif
+
+  if &filetype == 'javascript'
+    echo 'jancok'
+  endif
+
+endfunction
+
+nmap <F2> :call ConsolePrint()<CR>
+"##### END FUCNTION #####
